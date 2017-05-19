@@ -4,15 +4,15 @@
 <div class="main">
   <div class="container">
 		<img src="img/bg-top.jpg" style="width:100vw">
-    	<div class="ingresar-ticket">Su ticket: M2299</div>
+    	<div class="ingresar-ticket">Su ticket: {{data.ticketNo}}</div>
     	<div class="numero-personas">Personas aguardando antes</div>
    	  <div class="numero-ticket">6</div>
-    	<div class="numero-personas">Tiempo de espera aprox.  <a href="#">
+    	<div class="numero-personas">Tiempo de espera aprox.  <a>
             <img src="img/icono-compartir.png" width="24" height="25" alt="Compartir" class="right">
             </a>
             </div><div class="numero-personas" style="margin-top:15px">
     <strong style="font-size: 25px;">
-        15:42 <a href="#">
+        {{data.minutes}}:{{data.seconds}} <a>
             <!--<img src="img/icono-compartir.png" width="24" height="25" alt="Compartir" class="right">-->
         </a>
     </strong>
@@ -50,7 +50,7 @@
 </div>
     </ion-content>
     <ion-footer-bar style="height: 83px;border:none;background-position: bottom">
-        <div class="entrar" ui-sref="sharePage">
+        <div class="entrar" ng-click="exitPage()">
             <div class="icon"></div>
             <span class="icon"><img src="img/icono-entrar.png" alt="Entrar" width="21" height="19"></span> SALIR DE LA FLIA
         </div>

@@ -3,7 +3,8 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('VIQ', ['ionic', 'ticketNoSearch.controllers', 'ticketCurrentStatus.controllers', 'sharePage.controllers'])
+var URL = 'http://gservicesapp.com/Service.svc/'
+angular.module('VIQ', ['ionic', 'ticketNoSearch.controllers', 'ticketCurrentStatus.controllers','screenNo4N.controllers','branchcode.controllers','cordovadialogservice.module','ngCordova','httpservices.module', 'sharePage.controllers'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -15,7 +16,7 @@ angular.module('VIQ', ['ionic', 'ticketNoSearch.controllers', 'ticketCurrentStat
       // Don't remove this line unless you know what you are doing. It stops the viewport
       // from snapping when text inputs are focused. Ionic handles this internally for
       // a much nicer keyboard experience.
-      cordova.plugins.Keyboard.disableScroll(false);
+      cordova.plugins.Keyboard.disableScroll(true);
     }
     if(window.StatusBar) {
       StatusBar.styleDefault();
@@ -26,18 +27,26 @@ angular.module('VIQ', ['ionic', 'ticketNoSearch.controllers', 'ticketCurrentStat
         url: '/startPage',
         templateUrl: 'templates/startPage.html',
        
+    }).state('branchcode', {
+        url: '/branchcode',
+        templateUrl: 'templates/branchcode.html',
+        controller: 'branchcodeCtrl',
     })
 
    .state('ticketNoSearch', {
-       url: '/ticketNoSearch',
+       url: '/ticketNoSearch/:branchName',
        templateUrl: 'templates/ticketNoSearch.html',
        controller: 'ticketNoSearchCtrl',
    })
 
    .state('ticketCurrentStatus', {
-       url: '/ticketCurrentStatus',
+       url: '/ticketCurrentStatus/:ticketData',
        templateUrl: 'templates/ticketCurrentStatus.html',
        controller: 'ticketCurrentStatusCtrl'
+   }).state('screenNo4N', {
+       url: '/screenNo4N',
+       templateUrl: 'templates/screenNo4N.html',
+       controller: 'screenNo4NCtrl'
    })
      .state('sharePage', {
          url: '/sharePage',

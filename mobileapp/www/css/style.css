@@ -13,6 +13,10 @@ background-image:url(../img/bg-home.jpg);
     margin-left: 12px !important;
    
 }
+.n9{
+    background-color:#d84725;
+    height: 83px;border:none;background-position: bottom;
+}
 .design-cls{
     border: 1px solid #aaaaaa;
     background-color: white;
@@ -51,14 +55,14 @@ height: 667px*/
 	}
 	.input-search{
         width: 100%;
-    font-size: 38px !important;
+    font-size: 25px !important;
     color: #d84725 !important;
     text-align: center;
 	}
 		
 .main-naranja { 
-max-width: 375px;
-height: 667px;
+
+height: 100vh;
 background-color:#d84725;
 	}
 
@@ -75,7 +79,7 @@ background-color:#d84725;
 	text-align: center;
 	color: #FFF;
 	border-bottom: 1px solid #FFF;
-	width: 150px;
+	width: 160px;
 	margin: 250px auto 0px auto;
 	padding: 10px 0px;
 	font-weight: 800;
@@ -109,15 +113,21 @@ a {
 	color: #333;
 	border-bottom: 1px solid #333;
 	width: 200px;
-	margin: 20px auto 0px auto;
+	margin: 65px auto 0px auto;
 	padding-bottom: 10px;
 }
 
+svg{
+  width: 40px;
+  height: 40px;
+ 
+  display:inline-block;
+}
 .numero-ticket {
 	font-family: 'PT Sans', sans-serif;
 	text-align: center;
 	color: #d84725;
-	width: 250px;
+	width: 204px;
 	margin: 0px auto;
 	font-weight: 800;
 	font-size: 72px;
@@ -132,7 +142,7 @@ a {
 	width: 250px;
 	margin: 0px auto;
 	font-weight: 800;
-	font-size: 72px;
+	font-size: 72px;padding-top: 32px;
 }
 
 .numero-personas {
@@ -228,7 +238,7 @@ a {
 	text-align: center;
 }
 .container {
-	/*height: 570px;*/
+	height: 418px;
 	}
 .tiempo-espera {
 	margin: 10px auto;
@@ -258,6 +268,7 @@ a {
 .line	{
 	margin: 0px auto;
 	padding: 2px;
+    margin-bottom: 15px;
 	border-bottom: 1px solid #333;
 	width:300px;
 	}

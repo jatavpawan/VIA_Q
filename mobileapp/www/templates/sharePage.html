@@ -4,15 +4,16 @@
 <div class="main">
   <div class="container">
 		<img src="img/bg-logo.jpg" style="width:100vw">
-    	<div class="mensaje-final">Gracias por haber <br>
+    	<div class="mensaje-final" ng-init="showSuccess=false" ng-show="showSuccess">Gracias por haber <br>
    	    utilizado VIA Q. <br>
    	    <br>
    	    Ya sabes c&oacute;mo hacer <br>
    	    para <strong>no esperas m&aacute;s en filas.    	</strong></div>
-    <div class="tiempo-espera">
-   	    <p>&iquest;C&oacute;mo fu&eacute; experiencia con VIA Q?</p>
+    <div class="tiempo-espera" ng-show="!showSuccess">
+   	   
+        <p>&iquest;C&oacute;mo fue tu experiencia con VIA Q?</p>
     	  <table width="180" border="0" align="center" cellpadding="0" cellspacing="0" style="margin:0 auto">
-    	    <tr>
+    	    <tr ng-click="showSuccess=true" >
                 <td width="30" style="text-align:center"><i class="icon ion-android-star" ng-class="(reviewStar>=1)?'ion-android-star-cust':'ion-android-star-cust-grey'" ng-click="reviewStar=1"></i></td>
                 <td width="30" style="text-align:center"><i class="icon ion-android-star" ng-class="(reviewStar>=2)?'ion-android-star-cust':'ion-android-star-cust-grey'" ng-click="reviewStar=2"></i></td>
                 <td width="30" style="text-align:center"><i class="icon ion-android-star" ng-class="(reviewStar>=3)?'ion-android-star-cust':'ion-android-star-cust-grey'" ng-click="reviewStar=3"></i></td>
@@ -21,21 +22,28 @@
   	        </tr>
   	    </table>
     </div>
-    <div class="line"></div>
-    <div class="tiempo-espera">
-   	    <p>Comparti la app en las redes</p>
-   	    <table width="240" border="0" align="center" cellpadding="0" cellspacing="0" style="margin:0 auto">
-   	      <tr>
-   	        <td width="40" style="text-align:center"><img src="img/icon-fb.png" width="32" height="32" alt="Facebook"></td>
-   	        <td width="40" style="text-align:center"><img src="img/icon-ln.png" width="32" height="32" alt="Linkedin"></td>
-   	        <td width="40" style="text-align:center"><img src="img/icon-twt.png" width="32" height="32" alt="Twitter"></td>
-   	        <td width="40" style="text-align:center"><img src="img/icon-ins.png" width="32" height="32" alt="Instagram"></td>
-   	        <td width="40" style="text-align:center"><img src="img/icon-yt.png" width="32" height="32" alt="You Tube"></td>
-   	        <td width="40" style="text-align:center"><img src="img/icon-g.png" width="32" height="32" alt="Google+"></td>
-          </tr>
-        </table>
-    </div>
+  <!--  <div class="line"></div>-->
+  
   </div>
 </div>
     </ion-content>
+    <ion-footer-bar style="height: 150px;border:none;background-position: bottom">
+
+        <div class="tiempo-espera">
+            <div class="line"></div>
+            <p>
+                Compart&iacute; la app en las redes
+            </p>
+            <table width="240" border="0" align="center" cellpadding="0" cellspacing="0" style="margin:0 auto">
+                <tr>
+                    <td width="40" style="text-align:center"><img src="img/icon-fb.png" width="32" height="32" alt="Facebook"></td>
+                    <td width="40" style="text-align:center"><img src="img/icon-ln.png" width="32" height="32" alt="Linkedin"></td>
+                    <td width="40" style="text-align:center"><img src="img/icon-twt.png" width="32" height="32" alt="Twitter"></td>
+                    <td width="40" style="text-align:center"><img src="img/icon-ins.png" width="32" height="32" alt="Instagram"></td>
+                    <td width="40" style="text-align:center"><img src="img/icon-yt.png" width="32" height="32" alt="You Tube"></td>
+                    <td width="40" style="text-align:center"><img src="img/icon-g.png" width="32" height="32" alt="Google+"></td>
+                </tr>
+            </table>
+        </div>
+    </ion-footer-bar>
 </ion-view>
