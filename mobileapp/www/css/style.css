@@ -13,6 +13,12 @@ background-image:url(../img/bg-home.jpg);
     margin-left: 12px !important;
    
 }
+.has-header{
+    top:0px
+}
+.back-button > .back-text > .default-title {
+    display:none;
+}
 .n9{
     background-color:#d84725;
     height: 83px;border:none;background-position: bottom;
@@ -56,16 +62,82 @@ height: 667px*/
 	.input-search{
         width: 100%;
     font-size: 25px !important;
-    color: #d84725 !important;
+  
     text-align: center;
 	}
 		
 .main-naranja { 
 
 height: 100vh;
-background-color:#d84725;
+background-color:rgb(240,240,240);
 	}
+.ng-hide-add         { animation:0.5s lightSpeedOut ease; }
 
+/* when showing the picture */
+.ng-hide-remove      { animation:0.5s flipInX ease; }
+
+/* ANIMATIONS (FROM ANIMATE.CSS) ======================== */
+/* flip in */
+@keyframes flipInX {
+  0% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transition-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+  }
+
+  60% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+
+  100% {
+    transform: perspective(400px);
+    transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+
+/* light speed out */
+@keyframes lightSpeedOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    opacity: 0;
+  }
+}
+
+@keyframes lightSpeedOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    opacity: 0;
+  }
+}
 .logo {
 	margin: 0px auto;
 	padding: 150px 10px 20px 10px;
@@ -126,7 +198,7 @@ svg{
 .numero-ticket {
 	font-family: 'PT Sans', sans-serif;
 	text-align: center;
-	color: #d84725;
+	
 	width: 204px;
 	margin: 0px auto;
 	font-weight: 800;
@@ -149,7 +221,7 @@ svg{
 	font-family: 'PT Sans', sans-serif;
 	font-size: 18px;
 	text-align: center;
-	color: #d84725;
+	
 	width: 250px;
 	margin: 0px auto;
 	padding-top: 5px;
@@ -188,7 +260,11 @@ svg{
 .right {
 	float:right;
 	}
-
+.loading{
+    padding:5px !important;
+    color:black !important;
+    background-color: rgba(255, 255, 255, 0.7) !important;
+}
 .circulo-amarillo-chico {
 	border-radius: 50%;
 	width: 30px;
@@ -260,7 +336,7 @@ svg{
 	width: 300px;
 	font-family: 'PT Sans', sans-serif;
 	font-size: 20px;
-	color: #d84725;
+	
 	padding-bottom: 30px;
 	padding: 30px 0px;
 	text-align: center;

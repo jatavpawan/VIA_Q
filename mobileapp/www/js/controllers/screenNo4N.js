@@ -8,7 +8,7 @@
     //})
     setTimeout(function () {
         $state.go('sharePage');
-    }, 5000)
+    }, 20000)
     //$scope.searchBranch = function (name) {
     //    obj = { req_url: URL + "GetBranchList/" + name, data: '' }
     //    console.log(name);

@@ -22,7 +22,8 @@ angular.module('VIQ', ['ionic', 'ticketNoSearch.controllers', 'ticketCurrentStat
       StatusBar.styleDefault();
     }
   });
-}).config(function ($stateProvider, $urlRouterProvider) {
+}).config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+    $ionicConfigProvider.backButton.previousTitleText(false);
     $stateProvider.state('startPage', {
         url: '/startPage',
         templateUrl: 'templates/startPage.html',

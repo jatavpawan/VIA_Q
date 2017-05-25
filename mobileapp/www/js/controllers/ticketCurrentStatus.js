@@ -27,11 +27,7 @@
      x=    setInterval(function () {
             var currentTime = new Date().getTime();
             var distance = date - currentTime;
-            $scope.$apply(function () {
-                $scope.data.hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                $scope.data.minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                $scope.data.seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            });
+          
             if (distance < 2) {
                 clearInterval(x);
                 var obj = { req_url: URL + "Tickets_exausted", data: { TicketID: $scope.data.TicketId, Ticket_attended :1} }
@@ -39,6 +35,12 @@
                     $state.go('screenNo4N');
                 })
                
+            } else {
+                $scope.$apply(function () {
+                    $scope.data.hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    $scope.data.minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    $scope.data.seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                });
             }
             //  $scope.date = seconds
             console.log($scope.data.hours);
