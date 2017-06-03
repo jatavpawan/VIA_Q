@@ -4,7 +4,9 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 var URL = 'http://gservicesapp.com/Service.svc/'
-angular.module('VIQ', ['ionic', 'ticketNoSearch.controllers', 'ticketCurrentStatus.controllers','screenNo4N.controllers','branchcode.controllers','cordovadialogservice.module','ngCordova','httpservices.module', 'sharePage.controllers'])
+angular.module('VIQ', ['ionic', 'ticketNoSearch.controllers', 'ticketCurrentStatus.controllers',
+    'screenNo4N.controllers', 'branchcode.controllers', 'cordovadialogservice.module',
+    'ngCordova', 'httpservices.module', 'sharePage.controllers'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {

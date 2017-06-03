@@ -1,4 +1,5 @@
 {
   "name": "mobileapp",
-  "app_id": ""
+  "app_id": "com.ViaQ",
+  "type": "ionic1"
 }
