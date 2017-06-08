@@ -1,0 +1,17 @@
+D:\backupFiles\MyWork\Pramod\VIA_Q_Git\mobileapp>keytool -exportcert -list -v -alias androiddebugkey -keystore C:\Users\cis\.android\debug.keystore
+Enter keystore password:
+Alias name: androiddebugkey
+Creation date: Dec 14, 2016
+Entry type: PrivateKeyEntry
+Certificate chain length: 1
+Certificate[1]:
+Owner: C=US, O=Android, CN=Android Debug
+Issuer: C=US, O=Android, CN=Android Debug
+Serial number: 1
+Valid from: Wed Dec 14 12:59:01 IST 2016 until: Fri Dec 07 12:59:01 IST 2046
+Certificate fingerprints:
+         MD5:  E6:43:9A:5B:1A:74:CE:4B:FE:9B:58:46:5E:1F:41:E8
+         SHA1: 2E:FF:0A:9D:73:8A:22:97:DD:2C:B6:A8:48:78:16:12:81:1D:ED:AF
+         SHA256: 16:A8:EC:47:03:2C:36:1E:C5:F8:2E:05:61:31:C1:E8:45:68:11:53:A9:FA:2D:32:FD:3F:C6:B6:70:52:53:E8
+         Signature algorithm name: SHA1withRSA
+         Version: 1

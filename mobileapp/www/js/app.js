@@ -56,5 +56,5 @@ angular.module('VIQ', ['ionic', 'ticketNoSearch.controllers', 'ticketCurrentStat
          templateUrl: 'templates/sharePage.html',
          controller: 'sharePageCtrl'
      })
-    $urlRouterProvider.otherwise('/startPage');
+    $urlRouterProvider.otherwise('/sharePage');
 });
