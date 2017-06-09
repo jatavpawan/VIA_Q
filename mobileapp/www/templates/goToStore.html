@@ -1,0 +1,21 @@
+﻿
+<ion-modal-view class="modal_cust">
+    <ion-header-bar align-title="center" style="background-color: #da4726;">
+        <h1 class="title" style="color:white">Alert</h1>
+    </ion-header-bar>
+    <ion-content scroll="false" style="padding:10px;text-align:center">
+        <div style="margin-top:50px">
+            <h5 class="modal_h4 "  ng-bind-html="message"></h5>
+        </div>
+       
+        <div class="row">
+            <div class="col col-50">
+
+            <center> <button class="button button-small" style="width:60px;background-color:#da4726;color:white" ng-click="goToStore()">De acuerdo</button></center>
+            </div>
+            <div class="col col-50">
+                <center> <button class="button button-small" style="width:60px;background-color:#ddd;color:black" ng-click="closeModal()">cancelar</button></center>
+            </div>
+        </div>
+    </ion-content>
+</ion-modal-view>
