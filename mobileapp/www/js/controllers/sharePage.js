@@ -31,7 +31,7 @@
                url='http://www.google.com'
             }
             else {
-               url='http://www.google.com'
+                url = 'https://play.google.com/store/apps/details?id=com.twitter.android'
             }
         });
         //window.plugins.socialsharing.shareViaTwitter('Message and link via Twitter', null /* img */, 'http://www.x-services.nl');
@@ -46,20 +46,20 @@
                url='http://www.google.com'
             }
             else {
-                url='http://www.google.com'
+                url = 'https://play.google.com/store/apps/details?id=com.facebook.katana'
             }
         })
     }
 
     $scope.ShareInstagram = function () {
        // alert('This is Instagram');
-        window.plugins.socialsharing.shareViaInstagram('Message via Instagram', 'https://www.google.nl/images/srpr/logo4w.png', '', '', function () { console.log('share ok') }, function (errormsg) {
+        window.plugins.socialsharing.shareViaInstagram('Message via Instagram', 'https://www.google.nl/images/srpr/logo4w.png', function (suc) { console.log('share ok') }, function (errormsg) {
             $scope.modalRes.show();
             if (ionic.Platform.isIOS() || ionic.Platform.isIPad()) {
                 url='http://www.google.com'
             }
             else {
-                url='http://www.google.com'
+                url = 'https://play.google.com/store/apps/details?id=com.instagram.android'
             }
         });
     }
@@ -69,7 +69,7 @@ $scope.ShareLinkedIn=function(){
         url='http://www.google.com'
     }
     else {
-        url='http://www.google.com'
+        url = 'https://play.google.com/store/apps/details?id=com.linkedin.android'
         $scope.shareVia('com.linkedin.android', 'https://www.google.nl/images/srpr/logo4w.png')
     }
 }
@@ -80,7 +80,7 @@ $scope.ShareGooglePlus=function(){
         url='http://www.google.com'
     }
     else {
-        url='http://www.google.com'
+        url = 'https://play.google.com/store/apps/details?id=com.google.android.apps.plus'
         $scope.shareVia('com.google.android.apps.plus', 'https://www.google.nl/images/srpr/logo4w.png')
     }
 }
