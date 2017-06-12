@@ -28,7 +28,7 @@
                 $scope.modalRes.show();
             }, 0)
             if (ionic.Platform.isIOS() || ionic.Platform.isIPad()) {
-               url='http://www.google.com'
+                url = 'https://itunes.apple.com/app/id333903271'
             }
             else {
                 url = 'https://play.google.com/store/apps/details?id=com.twitter.android'
@@ -37,18 +37,19 @@
         //window.plugins.socialsharing.shareViaTwitter('Message and link via Twitter', null /* img */, 'http://www.x-services.nl');
     }
     $scope.ShareFacebook = function () {
-       // alert('this is FaceBook');
+        // alert('this is FaceBook');
+
         window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, null /* url */, function () { console.log('share ok') }, function (errormsg) {
             $timeout(function () {
                 $scope.modalRes.show();
             }, 0);
             if (ionic.Platform.isIOS() || ionic.Platform.isIPad()) {
-               url='http://www.google.com'
+                url = 'https://itunes.apple.com/app/id284882215'
             }
             else {
                 url = 'https://play.google.com/store/apps/details?id=com.facebook.katana'
             }
-        })
+        });
     }
 
     $scope.ShareInstagram = function () {
@@ -56,7 +57,7 @@
         window.plugins.socialsharing.shareViaInstagram('Message via Instagram', 'https://www.google.nl/images/srpr/logo4w.png', function (suc) { console.log('share ok') }, function (errormsg) {
             $scope.modalRes.show();
             if (ionic.Platform.isIOS() || ionic.Platform.isIPad()) {
-                url='http://www.google.com'
+                url = 'https://itunes.apple.com/app/id389801252'
             }
             else {
                 url = 'https://play.google.com/store/apps/details?id=com.instagram.android'
@@ -65,8 +66,8 @@
     }
 $scope.ShareLinkedIn=function(){
     if (ionic.Platform.isIOS() || ionic.Platform.isIPad()) {
-        $scope.shareVia('', 'https://www.google.nl/images/srpr/logo4w.png');
-        url='http://www.google.com'
+        $scope.shareVia('com.appcoda.linkedin.oauth', 'https://www.google.nl/images/srpr/logo4w.png');
+        url = 'https://itunes.apple.com/app/id288429040'
     }
     else {
         url = 'https://play.google.com/store/apps/details?id=com.linkedin.android'
