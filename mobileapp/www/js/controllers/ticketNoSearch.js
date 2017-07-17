@@ -4,9 +4,12 @@
     // $scope.reviewStar = 4;
    
     console.log($stateParams.branchName)
+var value=JSON.parse($stateParams.branchName);
     $scope.data = { ticketNo :''};
+    $scope.data.branchName=value.SitioDireccion;
     $scope.checkTicketDescription = function (data) {
-        console.log(data.ticketNo)
+        console.log($scope.data)
+        console.log($stateParams.branchName)
         if (data.ticketNo == '') {
            
             cordovadialogservice.alert('Ingrese el número del boleto para continuar', 'Alert', 'OK')
@@ -14,17 +17,17 @@
         }
         else {
             // console.log(ticketNo);
-            var objData = {
-                "BranchID":JSON.parse( $stateParams.branchName),
-               // "CreatedDate": new Date(),
-                "GCMId": "String content",
-                //"TicketAddedTime": 0,
-               // "TicketID": 2147483647,
-                "TicketNo": data.ticketNo,
-                "Ticket_attended": 1
-            }
+            // var objData = {
+            //     "BranchID":JSON.parse( $stateParams.branchName),
+            //    // "CreatedDate": new Date(),
+            //     "GCMId": "String content",
+            //     //"TicketAddedTime": 0,
+            //    // "TicketID": 2147483647,
+            //     "TicketNo": data.ticketNo,
+            //     "Ticket_attended": 1
+            // }
             // var obj = { req_url: URL + "GetEstimatedTicketTime/" + data.ticketNo + '/' + $stateParams.branchName, data: '' }
-            var obj = { req_url: URL + "SubmitTickets", data: objData }
+            var obj = { req_url: URL + "Iniciar/"+data.ticketNo, data: {}}; 
         //httpservices.getData(obj).then(function (res) {
         //    //  $scope.branchName = res.data.GetBranchListResult;
         //    console.log(res);
@@ -34,12 +37,18 @@
                 templateUrl: 'templates/loading.html'
 
             });
-            httpservices.setData(obj).then(function (res) {
+            httpservices.getData(obj).then(function (res) {
                 $ionicLoading.hide();
                     //  $scope.branchName = res.data.GetBranchListResult;
                 console.log(res);
-                $state.go('ticketCurrentStatus', { ticketData: JSON.stringify({ ticketNo: data.ticketNo, branchId: $stateParams.branchName }) })
+                if(!res.data.Error){
+                    console.log(data.SitioDireccion)
+                $state.go('ticketCurrentStatus', { ticketData: JSON.stringify({ ticketNo: res.data.ID, ticketText: data.ticketNo,branchName:$scope.data.branchName }) })    
+            }else{
+                cordovadialogservice.alert(res.data.Error)
+                
                    // ticketCurrentStatus
+            }
                 })
         }
     }

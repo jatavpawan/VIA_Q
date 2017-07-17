@@ -71,8 +71,8 @@
                     </li>
                 </ul>
                 <ul class="list">
-                    <li class="item" ng-repeat="value in branchName" ui-sref="ticketNoSearch({branchName:'{{value.BranchID}}'})">
-                        {{value.BranchName}}
+                    <li class="item" ng-repeat="value in branchName" ng-click="goToTicketSearch(value)" >
+                        {{value.SitioDireccion}}
                     </li>
                     <!--<li class="item">
                         Av Cabildo 3568

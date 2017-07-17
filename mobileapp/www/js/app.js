@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-var URL = 'http://gservicesapp.com/Service.svc/'
+var URL = ' http://viat.grupovia.com/app/'
 angular.module('VIQ', ['ionic', 'ticketNoSearch.controllers', 'ticketCurrentStatus.controllers',
     'screenNo4N.controllers', 'branchcode.controllers', 'cordovadialogservice.module',
     'ngCordova', 'httpservices.module', 'sharePage.controllers'])
@@ -47,12 +47,12 @@ angular.module('VIQ', ['ionic', 'ticketNoSearch.controllers', 'ticketCurrentStat
        templateUrl: 'templates/ticketCurrentStatus.html',
        controller: 'ticketCurrentStatusCtrl'
    }).state('screenNo4N', {
-       url: '/screenNo4N',
+       url: '/screenNo4N/:data',
        templateUrl: 'templates/screenNo4N.html',
        controller: 'screenNo4NCtrl'
    })
      .state('sharePage', {
-         url: '/sharePage',
+         url: '/sharePage/:data',
          templateUrl: 'templates/sharePage.html',
          controller: 'sharePageCtrl'
      })

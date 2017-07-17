@@ -1,6 +1,6 @@
 ﻿angular.module('sharePage.controllers', [])
 
-.controller('sharePageCtrl', function ($scope, $state, $ionicModal, $timeout, $cordovaInAppBrowser) {
+.controller('sharePageCtrl', function ($scope, $state, $ionicModal, $timeout, $cordovaInAppBrowser,$stateParams,httpservices) {
     // $scope.reviewStar = 4;
     var options = {
         location: 'yes',
@@ -9,6 +9,7 @@
         closebuttoncaption: 'Close'
     };
     var url;
+    console.log($stateParams.data);
     $ionicModal.fromTemplateUrl('templates/goToStore.html', {
         scope: $scope
     }).then(function (modal) {
@@ -105,5 +106,13 @@ $scope.goToStore = function () {
         // $cordovaInAppBrowser.close();
 
     }, false);
+}
+$scope.rateUser=function(value){
+     var obj = { req_url: URL + "Evaluar/"+$stateParams.data, data: {"Satisfacción":value} }
+     httpservices.updateData(obj).then(function (res) {
+       $ionicLoading.hide();
+       console.log(res)
+        $scope.branchName = res.data;
+    })
 }
 })

@@ -14,11 +14,11 @@
         <p>&iquest;C&oacute;mo lo atendieron?</p>
     	  <table width="180" border="0" align="center" cellpadding="0" cellspacing="0" style="margin:0 auto">
     	    <tr ng-click="showSuccess=true" >
-                <td width="30" style="text-align:center"><i class="icon ion-android-star" ng-class="(reviewStar>=1)?'ion-android-star-cust':'ion-android-star-cust-grey'" ng-click="reviewStar=1"></i></td>
-                <td width="30" style="text-align:center"><i class="icon ion-android-star" ng-class="(reviewStar>=2)?'ion-android-star-cust':'ion-android-star-cust-grey'" ng-click="reviewStar=2"></i></td>
-                <td width="30" style="text-align:center"><i class="icon ion-android-star" ng-class="(reviewStar>=3)?'ion-android-star-cust':'ion-android-star-cust-grey'" ng-click="reviewStar=3"></i></td>
-                <td width="30" style="text-align:center"><i class="icon ion-android-star" ng-class="(reviewStar>=4)?'ion-android-star-cust':'ion-android-star-cust-grey'" ng-click="reviewStar=4"></i></td>
-                <td width="30" style="text-align:center"><i class="icon ion-android-star" ng-class="(reviewStar>=5)?'ion-android-star-cust':'ion-android-star-cust-grey'" ng-click="reviewStar=5"></i></td>
+                <td width="30" style="text-align:center"><i class="icon ion-android-star" ng-class="(reviewStar>=1)?'ion-android-star-cust':'ion-android-star-cust-grey'" ng-click="reviewStar=1;rateUser('1')"></i></td>
+                <td width="30" style="text-align:center"><i class="icon ion-android-star" ng-class="(reviewStar>=2)?'ion-android-star-cust':'ion-android-star-cust-grey'" ng-click="reviewStar=2;rateUser('2')"></i></td>
+                <td width="30" style="text-align:center"><i class="icon ion-android-star" ng-class="(reviewStar>=3)?'ion-android-star-cust':'ion-android-star-cust-grey'" ng-click="reviewStar=3;rateUser('3')"></i></td>
+                <td width="30" style="text-align:center"><i class="icon ion-android-star" ng-class="(reviewStar>=4)?'ion-android-star-cust':'ion-android-star-cust-grey'" ng-click="reviewStar=4;rateUser('4')"></i></td>
+                <td width="30" style="text-align:center"><i class="icon ion-android-star" ng-class="(reviewStar>=5)?'ion-android-star-cust':'ion-android-star-cust-grey'" ng-click="reviewStar=5;rateUser('5')"></i></td>
   	        </tr>
   	    </table>
     </div>

@@ -7,11 +7,7 @@ angular.module('httpservices.module', []).factory('httpservices', ['$http', func
                 url: obj.req_url,
                 method: 'GET',
                 data: obj.data,
-                headers: {
-                    'Content-Type': 'application/json; charset=UTF-8'
-                    
-                  
-                }
+               
             });
             return xhr;
         },
