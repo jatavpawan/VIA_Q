@@ -45,7 +45,8 @@ var value=JSON.parse($stateParams.branchName);
                     console.log(data.SitioDireccion)
                 $state.go('ticketCurrentStatus', { ticketData: JSON.stringify({ ticketNo: res.data.ID, ticketText: data.ticketNo,branchName:$scope.data.branchName }) })    
             }else{
-                cordovadialogservice.alert(res.data.Error)
+               // cordovadialogservice.alert(res.data.Error);
+                 cordovadialogservice.alert("Lo sentimos, el ticket ingresado no es válido. Por favor, corrobore su código y vuelva a ingresarlo.")
                 
                    // ticketCurrentStatus
             }

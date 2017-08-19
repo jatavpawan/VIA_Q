@@ -62,8 +62,12 @@
         //     $ionicLoading.hide();
         //     clearInterval(x);
         //     $state.go('sharePage');
+          cordovadialogservice.alert("Gracias por utilizar VIA Q.","Alert","OK").then(function(){
+             $state.go('sharePage',{data:$scope.data.ticketNo});
+          })
+                
         // })
- $state.go('sharePage',{data:$scope.data.ticketNo});
+
     }
   //  http://gservicesapp.com/Service.svc/GetEstimatedTicketTime/{TICKETNO}/{BRANCHID}
 })
