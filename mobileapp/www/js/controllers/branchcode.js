@@ -23,6 +23,10 @@
         })
     }
     $scope.goToTicketSearch=function(value){
+         $ionicLoading.show({
+        templateUrl: 'templates/loading.html'
+
+    });
          obj = { req_url: URL + "Sitio/" + value.SitioID, data: {} }
          httpservices.getData(obj).then(function (res) {
        $ionicLoading.hide();

@@ -13,9 +13,7 @@ background-image:url(../img/bg-home.jpg);
     margin-left: 12px !important;
    
 }
-.has-header{
-    top:0px
-}
+
 .modal_cust.modal{
     display: block;
     position: absolute;
@@ -421,3 +419,11 @@ svg{
 .listado-activado a:hover {
 	color:#FFF;
 	}	
+.bck-btn{
+	position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 43px;
+    color: white;
+    z-index: 1022;
+}

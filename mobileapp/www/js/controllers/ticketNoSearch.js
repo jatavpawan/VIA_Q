@@ -12,7 +12,7 @@ var value=JSON.parse($stateParams.branchName);
         console.log($stateParams.branchName)
         if (data.ticketNo == '') {
            
-            cordovadialogservice.alert('Ingrese el número del boleto para continuar', 'Alert', 'OK')
+            cordovadialogservice.alert('Por favor, ingrese su número de ticket.', '   ', 'OK')
            
         }
         else {
@@ -46,7 +46,7 @@ var value=JSON.parse($stateParams.branchName);
                 $state.go('ticketCurrentStatus', { ticketData: JSON.stringify({ ticketNo: res.data.ID, ticketText: data.ticketNo,branchName:$scope.data.branchName }) })    
             }else{
                // cordovadialogservice.alert(res.data.Error);
-                 cordovadialogservice.alert("Lo sentimos, el ticket ingresado no es válido. Por favor, corrobore su código y vuelva a ingresarlo.")
+                 cordovadialogservice.alert("Lo sentimos, el ticket ingresado no es válido. Por favor, corrobore su código y vuelva a ingresarlo.", '  ', 'OK')
                 
                    // ticketCurrentStatus
             }
