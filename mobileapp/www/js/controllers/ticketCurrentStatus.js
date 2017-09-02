@@ -1,6 +1,6 @@
 ﻿angular.module('ticketCurrentStatus.controllers', [])
 
-.controller('ticketCurrentStatusCtrl', function ($scope, $state, $stateParams, httpservices, $ionicLoading) {
+.controller('ticketCurrentStatusCtrl', function ($scope,cordovadialogservice, $state, $stateParams, httpservices, $ionicLoading) {
     $scope.data = JSON.parse($stateParams.ticketData);
     //$scope.data.seconds='10'
     // $scope.reviewStar = 4;
