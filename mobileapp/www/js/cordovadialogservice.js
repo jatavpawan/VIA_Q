@@ -5,7 +5,7 @@ angular.module('cordovadialogservice.module', []).factory('cordovadialogservice'
         alert: function (message, title, buttonname) {
             console.log('called alert');
             var deferred = $q.defer();
-            $cordovaDialogs.alert(message, title, buttonname)
+            $cordovaDialogs.alert(message,  '   ', buttonname)
    .then(function (res) {
        
        console.log(res)
@@ -16,7 +16,7 @@ angular.module('cordovadialogservice.module', []).factory('cordovadialogservice'
         confirm: function (message,title,buttonArray) {
             var deferred = $q.defer();
            // console.log(buttonArray);
-            $cordovaDialogs.confirm(message, title, buttonArray)
+            $cordovaDialogs.confirm(message,  '   ', buttonArray)
    .then(function (res) {
 
        //console.log(res)

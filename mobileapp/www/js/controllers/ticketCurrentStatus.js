@@ -62,7 +62,7 @@
         //     $ionicLoading.hide();
         //     clearInterval(x);
         //     $state.go('sharePage');
-          cordovadialogservice.alert("Gracias por utilizar VIA Q.","Alert","OK").then(function(){
+          cordovadialogservice.alert("Gracias por utilizar VIA Q.", '   ',"OK").then(function(){
              $state.go('sharePage',{data:$scope.data.ticketNo});
           })
                 
