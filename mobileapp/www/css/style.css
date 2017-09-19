@@ -339,7 +339,8 @@ svg{
 	text-align: center;
 }
 .container {
-	height: 418px;
+	/* height: 418px; */
+	height: 468px;
 	}
 .tiempo-espera {
 	margin: 10px auto;
