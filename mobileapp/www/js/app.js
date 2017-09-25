@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 var URL = ' http://viat.grupovia.com/app/'
 angular.module('VIQ', ['ionic', 'ticketNoSearch.controllers', 'ticketCurrentStatus.controllers',
-    'screenNo4N.controllers', 'branchcode.controllers', 'cordovadialogservice.module',
+    'screenNo4N.controllers', 'branchcode.controllers', 'cordovadialogservice.module','detectGestures.module',
     'ngCordova', 'httpservices.module', 'sharePage.controllers'])
 
 .run(function($ionicPlatform) {
